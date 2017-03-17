@@ -1,0 +1,101 @@
+@extends('includes.layout-form')
+@section('title', 'Zuriyakids')
+@section('description', 'Kaos Muslim')
+@section('content')
+<div id="login-page" class="row">
+  <div class="col s12 z-depth-4 card-panel">
+    <form class="login-form" method="post">
+      <div class="row">
+        <div class="input-field col s12 center">
+          <h4>Register Agen</h4>
+        </div>
+      </div>
+      @if (count($errors) > 0)
+      <div id="card-alert" class="card green">
+        <div class="card-content white-text">
+          @foreach ($errors->all() as $error)
+          <p>{{ $error }}</p>
+          @endforeach
+        </div>
+        <button type="button" class="close white-text" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      @endif
+      @if ($message = Session::get('warning'))
+      <div id="card-alert" class="card orange">
+        <div class="card-content white-text">
+          <p>{{ $message }}</p>
+        </div>
+        <button type="button" class="close white-text" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      @endif
+      <div class="row margin">
+        <div class="input-field col s12">
+          <select name="inputpaket">
+            <option value="" disabled="" selected="">Pilih Paket
+              @foreach($paket as $pakets)
+              <option value="{{ $pakets->id }}">{{ $pakets->nama_paket }}</option>
+              @endforeach
+            </select>
+            <label for="paket" class="center-align">Pilih Paket</label>
+          </div>
+        </div>
+        <div class="row margin">
+          <div class="input-field col s12">
+            <i class="mdi-communication-email prefix"></i>
+            <input id="email" type="email" name="inputemail">
+            <label for="email" class="center-align">Email</label>
+          </div>
+        </div>
+        <div class="row margin">
+          <div class="input-field col s12">
+            <i class="mdi-social-person-outline prefix"></i>
+            <input id="username" type="text" name="inputusername">
+            <label for="username" class="center-align">Username</label>
+          </div>
+        </div>
+        <div class="row margin">
+          <div class="input-field col s12">
+            <i class="mdi-action-face-unlock prefix"></i>
+            <input id="namalengkap" type="text" name="inputnama">
+            <label for="namalengkap" class="center-align">Nama Lengkap</label>
+          </div>
+        </div>
+        <div class="row margin">
+          <div class="input-field col s12">
+            <i class="mdi-maps-local-phone prefix"></i>
+            <input id="handphone" type="text" name="inputhp">
+            <label for="handphone">Nomor Handphone</label>
+          </div>
+        </div>
+        <div class="row margin">
+          <div class="input-field col s12">
+            <i class="mdi-action-lock-outline prefix"></i>
+            <input id="password" type="password" name="inputpassword">
+            <label for="password">Password</label>
+          </div>
+        </div>
+        <div class="row">
+          <input type="hidden" name="inputstatus" value="0"/>
+          <input type="hidden" name="_token" value="{{ csrf_token() }}"/>
+          <div class="input-field col s12">
+            <button class="btn waves-effect waves-light col s12" type="submit">Register Now</button>
+          </div>
+          <div class="input-field col s12">
+            <p class="margin center medium-small sign-up">Sudah mempunya akun <a href="{{ url('/login') }}">Login</a></p>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  @stop
+  @section('js')
+  <script type="text/javascript">
+  $(document).ready(function() {
+  $('select').material_select();
+  });
+  </script>
+  @stop

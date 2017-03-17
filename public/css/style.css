@@ -1,0 +1,97 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+@font-face { font-family: arab; src: url('{{ URL::asset('../assets/fonts/roboto/trado.ttf'); }}'); }
+@font-face{ font-family: montserrat; src: url('https://fonts.googleapis.com/css?family=Montserrat:400,700');}
+html {
+  font-family: 'montserrat', sans-serif;
+  color: #616161;
+}
+body{
+  background-color: #EFF4F5;
+}
+nav ul a,
+nav .brand-logo .text-1{
+  color: #444;
+}
+.arab{
+  font-family: arab;
+  font-size: 20px;
+}
+.group{
+  background-color: #fff;
+}
+@media (min-width: 500px){
+ .group{
+  /*max-height: 325px;*/
+  background-color: #fff;
+} 
+}
+.thumbnail{
+  width: auto;
+  overflow: hidden;
+  margin: 0;
+}
+.clip-img{
+   margin:0 -15%;
+   width:205%;
+   display: block;
+}
+.detail-ttg-kami{
+  text-align: left;
+  margin-left: 20px;
+}
+p {
+  line-height: 2rem;
+}
+
+.button-collapse {
+  color: #26a69a;
+}
+
+.parallax-container {
+  min-height: 380px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+}
+  .parallax-container .section {
+    width: 100%;
+  }
+
+@media only screen and (max-width : 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+}
+
+@media only screen and (max-width : 600px) {
+  #index-banner .section {
+    top: 0;
+  }
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+footer.page-footer {
+  margin: 0;
+}
+.nav-content{
+  background-color: #e57373;
+  position: relative;
+  line-height: normal;
+  color: white;
+}
