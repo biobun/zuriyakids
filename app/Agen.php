@@ -1,15 +1,14 @@
 <?php 
-namespace App;
+namespace zuriyakids;
 use Eloquent;
 
 class Agen extends Eloquent{
 	protected $table = 'agen';
-	// protected $primaryKey = 'id_agen';
 	public $incrementing = false;
 
 	public function resellers()
 	{
-		return $this->hasMany('App\Reseller', 'agen_id');
+		return $this->hasMany('zuriyakids\Reseller', 'agen_id');
 	}
 
 	public function getFirstResellerAttribute()
@@ -17,12 +16,17 @@ class Agen extends Eloquent{
 		return $this->resellers()->first();
 	}
 	public function konfirmasipembayaran(){
-		return $this->hasOne('App\KonfirmasiPembayaran', 'agen_id');
+		return $this->hasOne('zuriyakids\KonfirmasiPembayaran', 'agen_id');
 	}
 	public function paket(){
-		return $this->belongsTo('App\Paket','paket_id');
+		return $this->belongsTo('zuriyakids\Paket');
 	}
-
+	public function user(){
+		return $this->hasOne('zuriyakids\User','email','email');
+	}
+	public function transaksi(){
+		return $this->hasMany('zuriyakids\transaksi', 'agen_id');
+	}
 }
 	
 ?>

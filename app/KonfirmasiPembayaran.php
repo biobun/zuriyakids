@@ -1,5 +1,5 @@
 <?php 
-namespace App;
+namespace zuriyakids;
 use Eloquent;
 
 class KonfirmasiPembayaran extends Eloquent{
@@ -7,7 +7,7 @@ class KonfirmasiPembayaran extends Eloquent{
 	public $incrementing = false;
 
 	public function agen(){
-		return $this->belongsTo('App\Agen','id');
+		return $this->belongsTo('zuriyakids\Agen');
 	}
 }
 	

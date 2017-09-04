@@ -12,7 +12,7 @@ return [
     | any other location as required by the application or its packages.
     */
 
-    'name' => 'Laravel',
+    'name' => 'Zuriyakids',
 
     /*
     |--------------------------------------------------------------------------
@@ -171,13 +171,13 @@ return [
         /*
          * Application Service Providers...
          */
-        App\Providers\AppServiceProvider::class,
-        App\Providers\AuthServiceProvider::class,
-        // App\Providers\BroadcastServiceProvider::class,
-        App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
+        zuriyakids\Providers\AppServiceProvider::class,
+        zuriyakids\Providers\AuthServiceProvider::class,
+        // zuriyakids\Providers\BroadcastServiceProvider::class,
+        zuriyakids\Providers\EventServiceProvider::class,
+        zuriyakids\Providers\RouteServiceProvider::class,
         'Collective\Html\HtmlServiceProvider',
-        'Intervention\Image\ImageServiceProvider',
+        Intervention\Image\ImageServiceProvider::class,
         Zizaco\Entrust\EntrustServiceProvider::class
 
     ],
@@ -230,7 +230,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Form' => 'Collective\Html\FormFacade',
         'Html' => 'Collective\Html\HtmlFacade',
-        'Image' => 'Intervention\Image\Facades\ImageServiceProvider::class',
+        'Image' => Intervention\Image\Facades\Image::class,
         'Entrust' => Zizaco\Entrust\EntrustFacade::class
 
     ],

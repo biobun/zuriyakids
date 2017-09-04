@@ -98,8 +98,32 @@ return [
     */
 
     'custom' => [
-        'attribute-name' => [
-            'rule-name' => 'custom-message',
+        'email' => [
+            'required' => 'Email harus diisi',
+            'unique' => 'Email telah digunakan',
+            'email'=> 'Email yang diinput harus benar'
+        ],
+        'paket' =>[
+            'required'=> 'Paket harus diisi'
+        ],
+        'username' =>[
+            'required'=> 'Username harus diisi',
+            'unique'=> 'Username telah digunakan',
+            'alpha'=> 'Username hanya terdiri dari huruf',
+            'max'=> 'Username maksimal terdiri dari 8 huruf'
+        ],
+        'alamat' =>[
+            'required'=> 'Alamat harus diisi'
+        ],
+        'nama' =>[
+            'required'=> 'Nama lengkap harus diisi'
+        ],
+        'password' =>[
+            'required'=> 'Password harus diisi',
+            'min'=> 'Password harus lebih dari 6 karakter'
+        ],
+        'handphone' =>[
+            'required'=> 'Handphone harus diisi'
         ],
     ],
 

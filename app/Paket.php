@@ -1,5 +1,5 @@
 <?php 
-namespace App;
+namespace zuriyakids;
 use Eloquent;
 
 class Paket extends Eloquent{
@@ -7,7 +7,7 @@ class Paket extends Eloquent{
 	public $incrementing = false;
 
 	public function agen(){
-		return $this->hasMany('App\Agen','paket_id');
+		return $this->hasMany('zuriyakids\Agen','paket_id');
 	}
 }
 	

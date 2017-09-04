@@ -12,12 +12,12 @@ class PaketTableSeeder extends Seeder
     public function run()
     {
         DB::table('paket')->insert([
-        	['id'=>"AG".str_random(4), 'nama_paket'=>'Paket Agen 1', 'harga'=> 5000000, 'Keterangan'=>"lorem ipsum dor amet"],
-        	['id'=>"AG".str_random(4), 'nama_paket'=>'Paket Agen 2', 'harga'=> 4000000, 'Keterangan'=>"lorem ipsum dor amet"],
-        	['id'=>"AG".str_random(4), 'nama_paket'=>'Paket Agen 3', 'harga'=> 3000000, 'Keterangan'=>"lorem ipsum dor amet"],
-        	['id'=>"RS".str_random(4), 'nama_paket'=>'Paket Reseller 1', 'harga'=>1000000, 'Keterangan'=>"lorem ipsum dor amet"],
-        	['id'=>"RS".str_random(4), 'nama_paket'=>'Paket Reseller 2', 'harga'=>500000, 'Keterangan'=>"lorem ipsum dor amet"],
-        	['id'=>"RS".str_random(4), 'nama_paket'=>'Paket Reseller 3', 'harga'=>300000, 'Keterangan'=>"lorem ipsum dor amet"],
+        	['id'=>"AG001", 'nama_paket'=>'Paket Al-Aqsa', 'harga'=> 2799000, 'Keterangan'=>"Paket Agen 1//Al-Aqsa"],
+        	['id'=>"AG002", 'nama_paket'=>'Paket An-Nabawi', 'harga'=> 5550000, 'Keterangan'=>"Paket Agen 2//An-Nabawi"],
+        	['id'=>"AG003", 'nama_paket'=>'Paket Al-Haram', 'harga'=> 7950000, 'Keterangan'=>"Paket Agen 3//Al-Haram"],
+        	['id'=>"RS001", 'nama_paket'=>'Paket Alif', 'harga'=>259000, 'Keterangan'=>"Paket Reseller 1//Alif"],
+        	['id'=>"RS002", 'nama_paket'=>'Paket Lam', 'harga'=>554000, 'Keterangan'=>"Paket Reseller 2//Lam"],
+        	['id'=>"RS003", 'nama_paket'=>'Paket Mim', 'harga'=>765000, 'Keterangan'=>"Paket Reseller 3//Mim"],
         	]);
     }
 }

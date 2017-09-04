@@ -1,0 +1,243 @@
+@font-face {font-family: "KBCloudyDay";
+    src: url("//db.onlinewebfonts.com/t/88e45e2207997af8d8949afc5ba58114.eot");
+    src: url("//db.onlinewebfonts.com/t/88e45e2207997af8d8949afc5ba58114.eot?#iefix") format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/88e45e2207997af8d8949afc5ba58114.woff2") format("woff2"),
+    url("//db.onlinewebfonts.com/t/88e45e2207997af8d8949afc5ba58114.woff") format("woff"),
+    url("//db.onlinewebfonts.com/t/88e45e2207997af8d8949afc5ba58114.ttf") format("truetype"),
+    url("//db.onlinewebfonts.com/t/88e45e2207997af8d8949afc5ba58114.svg#KBCloudyDay") format("svg");
+}
+body{
+	font-family: "KBCloudyDay";
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+td{
+  word-wrap: break-word;
+}
+.montserrat{
+  font-family: 'Roboto', sans-serif;
+}
+#btn-small {
+  padding: 0 0.5rem;
+}
+.bismillah{
+	width: 60%;
+}
+.chart{
+  padding-bottom: 10px;
+}
+.bg1{
+	background-image: url('../images/bg2.png');
+	background-size: 120%;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.blink_me {
+    -webkit-animation-name: blinker;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+
+    -moz-animation-name: blinker;
+    -moz-animation-duration: 1s;
+    -moz-animation-timing-function: linear;
+    -moz-animation-iteration-count: infinite;
+
+    animation-name: blinker;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@-moz-keyframes blinker {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
+
+@-webkit-keyframes blinker {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
+
+@keyframes blinker {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
+.flash {
+   animation-name: flash;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-play-state: running;
+}
+@keyframes flash {
+    from {color: red;}
+    to {color: blue;}
+}
+.dash{
+	border-top: dashed 3px black;
+}
+.dash-white{
+  border-top: dashed 3px white;
+}
+.image { 
+   position: relative; 
+   width: 100%; /* for IE 6 */
+   padding-bottom: 20px;
+}
+.text1 { 
+   position: absolute; 
+   top: 20px; 
+   left: 0; 
+   width: 100%; 
+}
+.text2 { 
+   position: absolute; 
+   top: 250px; 
+   left: 0; 
+   width: 100%;
+   font-family: "Roboto"; 
+}
+.text3 { 
+   position: absolute; 
+   top: 200px; 
+   left: 0; 
+   width: 100%; 
+}
+.footer {
+    background: #fafafa;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 50px;
+}
+.produk{
+  height: 200px;
+}    
+.jarak-atas{
+	margin-top: 5px;
+}
+.headline-1{
+  font-size: 18px;
+}
+.border{
+  border: 3px solid #455a64;
+}
+@media (min-width: 978px) {
+  .bismillah{
+	 width: 30%;
+	}
+	.text2 { 
+	 	position: absolute; 
+	 	top: 450px; 
+	 	left: 0; 
+	 	width: 100%;
+	}
+	.text3 { 
+  	position: absolute; 
+ 	 	top: 400px; 
+  	left: 0; 
+  	width: 100%; 
+	}
+  .text4{
+    position: absolute; 
+    top: 0px; 
+    left: 0; 
+    width: 100%;   
+  }
+  .produk{
+    height: 500px;
+  }
+	.bg1{
+		background-image: url('/images/bg2.png');
+		background-size: 50%;
+	}
+  .family{
+    margin-left:80px;
+    margin-bottom:-7px;
+  }
+  .login-form{
+    width: 580px;
+  }
+  .inherit{
+    width: inherit;
+  }    
+}
+@media (max-width: 600px){
+  .family{
+    margin-left:-40px;
+    margin-bottom:-7px; 
+    width:380px;
+  }
+  .text4{
+    position: absolute; 
+    top: 210px; 
+    left: 0; 
+    width: 100%;
+  }
+  .login-form{
+    width: 280px;
+  }
+  .center-align-hp{
+    text-align: center;
+  }    
+}
+.bulat{
+  height: 40px;
+  width: 40px;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 50%; /* may require vendor prefixes */
+  background: #000;
+  color: white;
+  font-size: 22px;
+}
+.head1{
+  display: table-cell;
+  vertical-align: middle;
+  padding-left: 20px;
+  font-size: 22px;
+}
+.card .card-content .card-title {
+    line-height: normal;
+}
+.font-small{
+  font-size: small;
+}
+
+#clockdiv{
+  color: #fff;
+  display: inline-block;
+  font-weight: bold;
+  text-align: center;
+  font-size: 16px;
+}
+
+#clockdiv > div{
+  padding: 10px;
+  border-radius: 3px;
+  background: #00BF96;
+  display: inline-block;
+}
+
+#clockdiv div > span{
+  padding: 15px;
+  border-radius: 3px;
+  background: #00816A;
+  display: inline-block;
+}
+
+.smalltext{
+  padding-top: 5px;
+  font-size: 16px;
+}
+a {
+  color: red;
+}

@@ -1,9 +1,9 @@
 <?php 
-namespace App\Http\Controllers;
+namespace zuriyakids\Http\Controllers;
 use Auth, Validator, Redirect, Hash, Session;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Input;
-use App\User;
+use zuriyakids\User;
 	/**
 	* 
 	*/

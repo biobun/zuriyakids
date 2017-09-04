@@ -1,5 +1,5 @@
 <?php 
-namespace App;
+namespace zuriyakids;
 use Eloquent;
 
 class Barang extends Eloquent{

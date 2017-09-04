@@ -17,13 +17,15 @@ class CreateTableAgenAndKonfirmasiPembayaran extends Migration
             $table->string('id');
             $table->string('nama');
             $table->string('username')->unique();
-            $table->string('user_id')->nullable();
             $table->string('email')->unique();
             $table->string('password');
             $table->string('handphone');
             $table->string('alamat')->nullable();
+            $table->string('kota')->nullable();
             $table->char('paket_id', 6);
+            $table->string('agen_id');
             $table->string('bbm')->nullable();
+            $table->string('image')->nullable();
             $table->boolean('status');
             $table->timestamps();
             $table->primary('id');

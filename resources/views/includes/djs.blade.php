@@ -4,11 +4,12 @@
       {{-- <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script> --}}
     <!--materialize js-->
     <script type="text/javascript" src="{{ URL::asset('js/dmaterialize.min.js') }}"></script>
+    <script type="text/javascript" src="{{ URL::asset('js/jquery.aCollapTable.min.js') }}"></script>
+ 
     <script type="text/javascript" src="{{ URL::asset('js/plugins/prism/prism.js') }}"></script>
 
     <!--scrollbar-->
-    <script type="text/javascript" src="{{ URL::asset('js/plugins/perfect-scrollbar/perfect-scrollbar.min.js') }}"></script>
-    
+    <script type="text/javascript" src="{{ URL::asset('js/plugins/perfect-scrollbar/perfect-scrollbar.min.js') }}"></script>   
 
     <!-- chartist -->
     <script type="text/javascript" src="{{ URL::asset('js/plugins/chartist-js/chartist.min.js') }}"></script>   

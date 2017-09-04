@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Controllers\Auth;
+namespace zuriyakids\Http\Controllers\Auth;
 
-use App\User;
-use App\Http\Controllers\Controller;
+use zuriyakids\User;
+use zuriyakids\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 

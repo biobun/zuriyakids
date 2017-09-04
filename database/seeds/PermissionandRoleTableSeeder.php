@@ -1,9 +1,9 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\Role;
-use App\Permission;
-use App\User;
+use zuriyakids\Role;
+use zuriyakids\Permission;
+use zuriyakids\User;
 class PermissionandRoleTableSeeder extends Seeder
 {
     /**
@@ -51,13 +51,8 @@ class PermissionandRoleTableSeeder extends Seeder
         $reseller->attachPermission($viewData);
      
         $adminRole = DB::table('roles')->where('name', '=', 'Admin')->pluck('id');
-        $agenRole = DB::table('roles')->where('name', '=', 'Agen')->pluck('id');
-        // print_r($userRole);
-        // die();
       
         $user1 = User::where('username','=','admin')->first();
-        $user2 = User::where('username','=','biobun')->first();
         $user1->roles()->attach($adminRole);
-        $user2->roles()->attach($agenRole);
     }
 }

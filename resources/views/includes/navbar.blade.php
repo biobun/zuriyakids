@@ -1,4 +1,4 @@
-<nav class="green accent-2" role="navigation">
+<nav class=" grey lighten-3 z-depth-0" role="navigation">
    <div class="nav-wrapper">
       <a href={{ url('') }} class="brand-logo"><img src="images/logo1.png" width="65" style="margin-left: 20px"></a>
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>

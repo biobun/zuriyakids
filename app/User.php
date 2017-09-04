@@ -1,11 +1,11 @@
 <?php
 
-namespace App;
+namespace zuriyakids;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Zizaco\Entrust\Traits\EntrustUserTrait;
-use App\Agen;
+use zuriyakids\Agen;
 
 class User extends Authenticatable
 {
@@ -37,10 +37,6 @@ class User extends Authenticatable
     }
     public function agen()
     {
-        return $this->hasOne('App\Agen','email');
-    }
-    public function getAgenAttribute()
-    {
-        return $this->agen()->first();
+        return $this->hasOne('zuriyakids\Agen','email', 'email');
     }
 }
